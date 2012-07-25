@@ -1,0 +1,10 @@
+*
+!*.bib
+!*.tex
+!.gitignore
+!*.ps
+!*.eps
+!/img
+!*.gd
+!/gd
+!*.exec
