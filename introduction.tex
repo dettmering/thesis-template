@@ -10,3 +10,61 @@ The deposited energy ($\Delta E$) per mass unit ($\Delta m$) is called \textit{d
 \begin{equation}
 D[Gy]=\frac{\Delta E}{\Delta m} \left [ \frac{J}{kg} \right]
 \end{equation}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet (Table \ref{tab:test}). Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\ctable[
+	caption = This is a table!,
+	pos     = ht,
+	label = tab:test,
+ ]{llll}{
+ }{                                                          \FL
+       A & B & C & D \ML
+	Coeff. & $2.0 \pm 0.2$ & $1.4 \pm 0.8$ & $0.8 \pm 0.2$ \NN
+	$R^2$ & 0.997 & 0.973 & 0.998 \LL
+}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet (Figure \ref{fig:test}).
+
+\begin{figure}[ht]
+\centering
+
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
+\begin{tikzpicture}
+\begin{axis}[
+  no markers, domain=-5:5, samples=200, ymin=-0.05,
+  axis lines*=left, xlabel=$t$, ylabel=\empty,
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={-3.5,-1.5,0,1.5,3.5}, ytick=\empty, %  xtick={4,6.5},
+  enlargelimits=false, clip=false, axis on top,
+  grid = major
+  ]
+
+\draw  [fill=black!5]  (axis cs:-3.5,0)  rectangle  (axis cs:3.5,-0.05);
+\draw  [fill=black!15]  (axis cs:-1.5,0)  rectangle  (axis cs:1.5,-0.05);
+\addplot [thick,black!30] {gauss(-4.5,1)};
+\addplot [thick,black!30] {gauss(7,1)};
+\addplot [fill=black!5, draw=none, domain=-3.5:3.5] {gauss(0,1)} \closedcycle;
+\addplot [fill=black!15, draw=none, domain=-1.5:1.5] {gauss(0,1)} \closedcycle;
+
+\addplot [thick] {gauss(0,1)};
+
+\draw [yshift=-1cm, latex-latex](axis cs:-1.5,0) -- node [fill=white] {Lorem} (axis cs:1.5,0);
+\draw [yshift=-1.6cm, latex-latex](axis cs:-3.5,0) -- node [fill=white] {ipsum} (axis cs:3.5,0);
+
+\draw [dashed](axis cs:-2,0.13) -- (axis cs:2,0.13);
+\node at (axis cs:2.8,0.13) {\emph{Line}};
+
+\draw [-latex](axis cs:-2.245,0.3) -- (axis cs:-2.245,0.05);
+\node at (axis cs:-2.245,0.33) {\small Arrow};
+
+\end{axis}
+\end{tikzpicture}
+\caption{This is a TikZ/PGF figure!}
+\label{fig:test}
+\end{figure}
