@@ -9,7 +9,7 @@ Tips
 * remove the ```.git/``` folder after cloning this repository and start a new one with ```git init```.
 * Start a new line with each sentence. This will make it easier for git to track the changes later on.
 * When you submit your thesis for correction, make a new annotated tag ```git tag -s v1 -m 'submitted for correction to .. on DATE'``` to create a snapshot of the current status.
-* Make a new branch for each submissionn and corrector, and include the received corrections in that branch. Meanwhile, keep working on your ```master``` branch. Add corrections to the appropriate branch. This will make it easier for you to merge the corrections later.
+* Make a new branch for each submission and corrector, and include the received corrections in that branch. Meanwhile, keep working on your ```master``` branch. Add corrections to the appropriate branch. This will make it easier for you to merge the corrections later.
 
 Helping hands
 -------------
