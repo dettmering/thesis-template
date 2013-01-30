@@ -15,6 +15,7 @@ Helping hands
 -------------
 
 * LaTeX online equation editor: http://www.codecogs.com/latex/eqneditor.php
+* The best LaTeX forum in existence: http://tex.stackexchange.com
 
 LICENSE
 -------
