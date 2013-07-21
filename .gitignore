@@ -5,6 +5,3 @@
 !*.ps
 !*.eps
 !/img
-!*.gd
-!/gd
-!*.exec
