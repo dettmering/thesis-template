@@ -1,5 +1,6 @@
 thesis template
 ===============
+![PDF build](https://www.sharelatex.com/github/repos/dettmering/thesis-template/builds/latest/badge.svg)
 
 This is a finished memoir template to start your thesis from.
 
